@@ -8,27 +8,33 @@ public class Timer : MonoBehaviour
 
     public TextMeshProUGUI timerText;
 
-    public float currentTime;
-    public bool countUp;
+    public float currentTime = 1;
+    public int countUp;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        // Repeats IEnumerator Time method
+        StartCoroutine(Time());
+    }
+
+    IEnumerator Time()
+    {
+        // Anything under will start every second
+        yield return new WaitForSeconds(1);
         
+        if (currentTime == 0)
+        {
+            currentTime += countUp++;
+        }
+        
+
+
+        // Anything above will start every second and repeat
+        StartCoroutine(Time());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        currentTime = countUp ? currentTime += Time.deltaTime : Time.time;
-        timerText.text = currentTime.ToString();
-
-    } 
-
-    void TimerCountUpText()
-    {
-
-    }
+    
 
 }
