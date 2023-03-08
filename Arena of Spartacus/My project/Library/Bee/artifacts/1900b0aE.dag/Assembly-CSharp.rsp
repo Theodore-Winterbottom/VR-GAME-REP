@@ -363,8 +363,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Subsystem.Registration.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Sysroot.Linux_x86_64.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.SysrootPackage.Editor.ref.dll"
--r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TerrainTools.Editor.ref.dll"
--r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TerrainTools.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TestTools.CodeCoverage.Editor.ref.dll"
