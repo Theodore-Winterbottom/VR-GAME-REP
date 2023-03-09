@@ -332,6 +332,8 @@
 -r:"C:/Users/DNAGY.1.2122/Documents/GitHub/VR-GAME-REP/Arena of Spartacus/My project/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Autodesk.Fbx.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Autodesk.Fbx.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.AI.Navigation.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.AI.Navigation.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Animation.Rigging.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Animation.Rigging.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Burst.Editor.ref.dll"
@@ -407,6 +409,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
+"Assets/Scripts/EnemyAi.cs"
 "Assets/XRPlatformControllerSetup.cs"
 -langversion:9.0
 
