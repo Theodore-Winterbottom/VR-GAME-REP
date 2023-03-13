@@ -40,6 +40,8 @@ public class EnemyAi : MonoBehaviour
         if (playerInSightRange && !playerInAttackRange)
         {
             ChasePlayer();
+            transform.LookAt(player);
+
         }
 
         //Attacks player if it is in range
