@@ -9,7 +9,7 @@ public class EnemyAi : MonoBehaviour
 
     [Header("Objects attach to player")]
 
-    [SerializeField] private NavMeshAgent agent;
+    [SerializeField] public NavMeshAgent agent;
 
     [SerializeField] private Transform player;
 
@@ -26,7 +26,7 @@ public class EnemyAi : MonoBehaviour
 
     [SerializeField] private float speed;
 
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         //Check for sight and attack range
         
@@ -40,7 +40,7 @@ public class EnemyAi : MonoBehaviour
         if (playerInSightRange && !playerInAttackRange)
         {
             ChasePlayer();
-            transform.LookAt(player);
+            
 
         }
 
@@ -53,10 +53,11 @@ public class EnemyAi : MonoBehaviour
     }
 
 
-    private void ChasePlayer()
+    public void ChasePlayer()
     {
         //Chases the player as long as it is in range
         agent.SetDestination(player.position);
+        transform.LookAt(player);
     }
 
     public void AttackPlayer()

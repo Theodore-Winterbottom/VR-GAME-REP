@@ -29,8 +29,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8321089381327772693}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: -26.3}
+  m_LocalRotation: {x: -0.00908962, y: 0.91834706, z: 0.02112699, w: 0.3951072}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 8321089381327772688}
-  player: {fileID: 0}
+  player: {fileID: 3098223687036782859, guid: a98eaf54b9100234c84d053810329905, type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64

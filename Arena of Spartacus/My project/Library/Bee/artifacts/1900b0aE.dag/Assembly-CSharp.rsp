@@ -410,6 +410,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
 "Assets/Scripts/EnemyAi.cs"
+"Assets/Scripts/EnemySpawner.cs"
 "Assets/XRPlatformControllerSetup.cs"
 -langversion:9.0
 
