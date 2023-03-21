@@ -15,9 +15,6 @@ public class EnemyAi : MonoBehaviour
 
     [SerializeField] private LayerMask whatIsGround, whatIsPlayer;
 
-    [SerializeField] private Rigidbody rb;
-
-
     [Header("States")]
 
     [SerializeField] private float sightRange, attackRange, rangeAttack;
@@ -25,6 +22,8 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] public bool playerInSightRange, playerInAttackRange, playerInRangeAttack;
 
     [SerializeField] private float speed;
+
+    [SerializeField] private float health;
 
     private void FixedUpdate()
     {
@@ -50,7 +49,10 @@ public class EnemyAi : MonoBehaviour
         }
 
     }
-
+    private void TakeDamage()
+    {
+        health -= 20;
+    }
 
     private void ChasePlayer()
     {
