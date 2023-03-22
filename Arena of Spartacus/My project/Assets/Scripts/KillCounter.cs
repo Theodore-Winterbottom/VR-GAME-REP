@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 using UnityEngine.UI;
 
 public class KillCounter : MonoBehaviour
 {
-    public Text killCounterText;
+    public TextMeshProUGUI killCounterText;
 
-    public int killCounter;
+    public int kills;
+
+    public GameObject enemy;
 
 
 
@@ -26,18 +29,8 @@ public class KillCounter : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
-        
+        Destroy(enemy);
+        kills++;
+        killCounterText.text = "Enemy Killed" + kills;
     }
-
-    private void ShowKills()
-    {
-        killCounterText.text = killCounter.ToString();
-    }
-
-    private void AddKills()
-    {
-        
-    }
-
 }
