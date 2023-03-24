@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class KillCounter : MonoBehaviour
 {
@@ -13,24 +14,23 @@ public class KillCounter : MonoBehaviour
 
     public GameObject enemy;
 
+    public float health;
+
+    public float SetMaxHealth;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // When the player is hit by an enemy player takes damage
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(enemy);
-        kills++;
-        killCounterText.text = "Enemy Killed" + kills;
+        // Player deals damage to enemy if plyer hits enemy
+        if (collision.gameObject.tag == "Enemy")
+        {
+
+            Destroy(enemy);
+            kills++;
+            killCounterText.text = "Enemy Killed" + kills;
+
+        }
     }
 }
