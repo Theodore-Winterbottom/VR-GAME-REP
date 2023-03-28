@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 
 public class KillCounter : MonoBehaviour
 {
+
     public TextMeshProUGUI killCounterText;
 
     public int kills;
@@ -15,8 +16,6 @@ public class KillCounter : MonoBehaviour
     public GameObject enemy;
 
     public float health;
-
-    public float SetMaxHealth;
 
 
 
@@ -26,11 +25,92 @@ public class KillCounter : MonoBehaviour
         // Player deals damage to enemy if plyer hits enemy
         if (collision.gameObject.tag == "Enemy")
         {
-
-            Destroy(enemy);
+            Destroy(gameObject);
             kills++;
             killCounterText.text = "Enemy Killed" + kills;
 
         }
     }
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*public TextMeshProUGUI killCounterText;
+
+    public int kills;
+
+    public GameObject enemy;
+
+    public float health;
+
+
+
+    // When the player is hit by an enemy player takes damage
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Player deals damage to enemy if plyer hits enemy
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+            kills++;
+            killCounterText.text = "Enemy Killed" + kills;
+
+        }
+
+
+
+
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(collision.gameObject);
+    }
+    }*/
 }

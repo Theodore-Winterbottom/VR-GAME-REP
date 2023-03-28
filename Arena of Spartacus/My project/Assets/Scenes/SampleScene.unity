@@ -1113,7 +1113,7 @@ GameObject:
   - component: {fileID: 1466619994}
   - component: {fileID: 1466619993}
   m_Layer: 0
-  m_Name: Enemy (1)
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1451,7 +1451,7 @@ GameObject:
   - component: {fileID: 1899046811}
   - component: {fileID: 1899046810}
   m_Layer: 0
-  m_Name: Enemy (2)
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1544,7 +1544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899046809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3064712, y: 1.0117006, z: 4.33}
+  m_LocalPosition: {x: -0.02, y: 1.0117006, z: 4.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1720,6 +1720,7 @@ GameObject:
   - component: {fileID: 2044675382}
   - component: {fileID: 2044675387}
   - component: {fileID: 2044675386}
+  - component: {fileID: 2044675388}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1817,9 +1818,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00851bb1b27e6db4eba1a11ed76a3f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killCounterText: {fileID: 2079795331}
+  killCounterText: {fileID: 0}
   kills: 0
   enemy: {fileID: 0}
+  health: 0
 --- !u!54 &2044675387
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1836,6 +1838,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2044675388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044675381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00851bb1b27e6db4eba1a11ed76a3f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killCounterText: {fileID: 0}
+  kills: 0
+  enemy: {fileID: 0}
+  health: 0
 --- !u!1 &2079795329
 GameObject:
   m_ObjectHideFlags: 0
