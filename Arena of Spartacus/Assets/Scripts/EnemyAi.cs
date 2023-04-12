@@ -26,6 +26,30 @@ public class EnemyAi : MonoBehaviour
 
     [SerializeField] private float speed;
 
+    //Point towards the instantiated Object will move
+    Transform goal;
+
+    //Reference to the NavMeshAgent
+    UnityEngine.AI.NavMeshAgent agent1;
+
+    // Use this for initialization
+    void Start()
+    {
+        //You get a reference to the destination point inside your scene
+        goal = GameObject.Find("Player").GetComponent<Transform>();
+
+        //Here you get a reference to the NavMeshAgent
+        agent1 = GetComponent<UnityEngine.AI.NavMeshAgent>();
+
+        //You indicate to the agent to what position it has to move
+        agent1.destination = goal.position;
+    }
+
+    void Update()
+    {
+        agent1.destination = goal.position;
+    }
+
     public void FixedUpdate()
     {
         //Check for sight and attack range
@@ -39,31 +63,35 @@ public class EnemyAi : MonoBehaviour
         //chases player if it is in the dection field
         if (playerInSightRange && !playerInAttackRange)
         {
-            ChasePlayer();
+            //ChasePlayer();
             
+
 
         }
 
         //Attacks player if it is in range
         if (playerInSightRange && playerInAttackRange)
         {
-            AttackPlayer();
+            //AttackPlayer();
         }
         
     }
 
 
-    public void ChasePlayer()
+    /*public void ChasePlayer()
     {
+        Debug.Log("Hi");
         //Chases the player as long as it is in range
         agent.SetDestination(player.position);
         transform.LookAt(player);
-    }
+
+       
+    }*/
 
     public void AttackPlayer()
     {
         //Moves towards the player to perform a attack
-        agent.SetDestination(transform.position);
+        //agent.SetDestination(transform.position);
 
     }
 

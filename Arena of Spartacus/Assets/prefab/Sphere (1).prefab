@@ -126,7 +126,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 6
+  m_Speed: 2
   m_Acceleration: 12
   avoidancePriority: 50
   m_AngularSpeed: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 8321089381327772688}
-  player: {fileID: 4897839861919361935, guid: a98eaf54b9100234c84d053810329905, type: 3}
+  player: {fileID: 4710776960883302268, guid: 8ddb7f2affa9c084b8d64b9202a56525, type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64

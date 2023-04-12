@@ -27,14 +27,14 @@ public class EnemySpawner : MonoBehaviour
     {
         x = Random.Range(-35, 35);
         y = .5f;
-        z = Random.Range(-45, 50);
+        z = Random.Range(-35, 40);
 
         yield return new WaitForSeconds(interval);
         GameObject newEnemy = Instantiate(enemy, new Vector3(x, y, z), Quaternion.identity);
         StartCoroutine(spawnEnemy(interval, enemy));
         enmeyAi.agent.Warp(transform.position);
         enmeyAi.agent.enabled = true;
-        enmeyAi.ChasePlayer();
+        //enmeyAi.ChasePlayer();
         
     }
 }
