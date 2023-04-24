@@ -220,7 +220,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &239436661
 GameObject:
@@ -262,13 +262,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239436661}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.000000014901159, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &664143220
 Mesh:
@@ -708,7 +708,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1316176115
 GameObject:
@@ -769,7 +769,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1732182459
 GameObject:
@@ -982,7 +982,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!33 &557853370245341567
 MeshFilter:
@@ -1087,7 +1087,7 @@ PrefabInstance:
     - target: {fileID: 4710776960883302268, guid: 8ddb7f2affa9c084b8d64b9202a56525,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4710776960883302268, guid: 8ddb7f2affa9c084b8d64b9202a56525,
         type: 3}
@@ -1209,6 +1209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc82c3eeec8a0a4ea3fe9a13487f866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthAmount: 100
 --- !u!1 &5059734105556867339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,7 +1227,7 @@ GameObject:
   - component: {fileID: 9097470533626697703}
   m_Layer: 7
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1241,7 +1242,7 @@ PrefabInstance:
     - target: {fileID: 4897839861919361935, guid: a98eaf54b9100234c84d053810329905,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4897839861919361935, guid: a98eaf54b9100234c84d053810329905,
         type: 3}
@@ -1540,3 +1541,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8f00f85cc20bf4882cb80f36082631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 0}

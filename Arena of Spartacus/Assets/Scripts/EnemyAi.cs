@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -16,6 +17,8 @@ public class EnemyAi : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround, whatIsPlayer;
 
     [SerializeField] private Rigidbody rb;
+
+    public float healthAmount = 100;
 
 
     [Header("States")]
@@ -45,9 +48,28 @@ public class EnemyAi : MonoBehaviour
         agent1.destination = goal.position;
     }
 
+    public void TakeDamage(float Damage)
+    {
+        healthAmount -= Damage;
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Sword")
+        {
+            TakeDamage(50);
+        }
+    }
+
     void Update()
     {
         agent1.destination = goal.position;
+
+        if (healthAmount <= 0)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     public void FixedUpdate()

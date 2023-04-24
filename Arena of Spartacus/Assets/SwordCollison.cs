@@ -8,8 +8,7 @@ using UnityEngine.XR;
 
 public class SwordCollison : MonoBehaviour
 {
-    // Start is called before the first frame update
-    // Start is called before the first frame update
+    public Health health;
     void Start()
     {
 
@@ -19,9 +18,9 @@ public class SwordCollison : MonoBehaviour
     void Update()
     {
 
-       if(Input.GetButtonDown("XRI_Right_Trigger"))
-        {
-            Debug.Log("HI");
-        }
+       if(gameObject.CompareTag("Enemy"))
+       {
+            Destroy(gameObject);
+       }
     }
 }
