@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -16,18 +15,20 @@ public class EnemyAi : MonoBehaviour
 
     [SerializeField] private LayerMask whatIsGround, whatIsPlayer;
 
-    [SerializeField] private Rigidbody rb;
-
-    public float healthAmount = 100;
-
-
     [Header("States")]
 
     [SerializeField] private float sightRange, attackRange, rangeAttack;
-    
+
     [SerializeField] public bool playerInSightRange, playerInAttackRange, playerInRangeAttack;
 
     [SerializeField] private float speed;
+
+    [SerializeField] private float health;
+
+
+    [SerializeField] private Rigidbody rb;
+
+    public float healthAmount = 100;
 
     //Point towards the instantiated Object will move
     Transform goal;
@@ -55,7 +56,7 @@ public class EnemyAi : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Sword")
+        if (collision.gameObject.tag == "Sword")
         {
             TakeDamage(50);
         }
@@ -63,6 +64,7 @@ public class EnemyAi : MonoBehaviour
 
     void Update()
     {
+
         agent1.destination = goal.position;
 
         if (healthAmount <= 0)
@@ -70,52 +72,33 @@ public class EnemyAi : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (transform.position.y > .3f)
+        {
+            agent.enabled = false;
+        }
+        else
+        {
+            agent.enabled = true;
+        }
+
     }
 
-    public void FixedUpdate()
+
+    private void FixedUpdate()
     {
         //Check for sight and attack range
-        
+
 
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
         playerInRangeAttack = Physics.CheckSphere(transform.position, rangeAttack, whatIsPlayer);
 
 
-        //chases player if it is in the dection field
-        if (playerInSightRange && !playerInAttackRange)
-        {
-            //ChasePlayer();
-            
-
-
-        }
-
-        //Attacks player if it is in range
-        if (playerInSightRange && playerInAttackRange)
-        {
-            //AttackPlayer();
-        }
         
-    }
-
-
-    /*public void ChasePlayer()
-    {
-        Debug.Log("Hi");
-        //Chases the player as long as it is in range
-        agent.SetDestination(player.position);
-        transform.LookAt(player);
-
-       
-    }*/
-
-    public void AttackPlayer()
-    {
-        //Moves towards the player to perform a attack
-        //agent.SetDestination(transform.position);
 
     }
+
+    
 
     public void Death()
     {

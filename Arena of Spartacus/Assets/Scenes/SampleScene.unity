@@ -238,7 +238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &239436662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,10 +251,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f07c82924c82b8c45a7083ffbed847d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8321089381327772693, guid: 95abde0f618d9f2449578cbb8658fe8a,
+  enemyPrefab: {fileID: 1513842971178686933, guid: a9ca129c02b10d9478ce87348f7a658a,
     type: 3}
   enemyInterval: 3
-  enmeyAi: {fileID: 8321089381327772690, guid: 95abde0f618d9f2449578cbb8658fe8a, type: 3}
+  enmeyAi: {fileID: 517695763562038995, guid: a9ca129c02b10d9478ce87348f7a658a, type: 3}
 --- !u!4 &239436663
 Transform:
   m_ObjectHideFlags: 0
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 1235104408}
   m_Layer: 6
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1277,7 +1277,7 @@ PrefabInstance:
     - target: {fileID: 4897839861919361935, guid: a98eaf54b9100234c84d053810329905,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4897839861919361935, guid: a98eaf54b9100234c84d053810329905,
         type: 3}
