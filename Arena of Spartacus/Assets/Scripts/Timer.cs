@@ -6,50 +6,39 @@ using Unity.VisualScripting;
 
 public class Timer : MonoBehaviour
 {
-
+    // Timer text display
     public TextMeshProUGUI timerText;
-
+    // Timer Variable
     public float timer;
-    public int countUp = 1;
-
-    
-    
 
     // Start is called before the first frame update
     void Start()
     {
-        // Repeats IEnumerator Time method
-        //StartCoroutine(Time());
+        // Timer starts at zero
+        timer = 0f;
+        // Ativates UpdateTimer method
+        UpdateTimer();
     }
-
-    void ToStartCoroutine(int countUp)
+    // Updates every frame
+    private void Update()
     {
-        // When Botton GameObject is pressed Timer is active
-        if (gameObject.tag == ("Botton"))
-        {
-            // Repeats IEnumerator Time method
-            StartCoroutine(Time());
-        }
+        // Incresses time by 1 sec
+        timer += Time.deltaTime;
+        // Ativates UpdateTimer method
+        UpdateTimer();
     }
-
-    IEnumerator Time()
+    // Method adds time
+    void UpdateTimer()
     {
-        // Anything under will start every second
-        yield return new WaitForSeconds(1);
+        // Time Variables
+        hours: minuts: seconds :
 
-        AddTime(countUp);
+        // Updates the timer display
+        int hours = Mathf.FloorToInt(timer / 60f);
+        int minuts = Mathf.FloorToInt(timer % 60f);
+        int seconds = Mathf.FloorToInt((timer * 60f) % 60f);
+        timerText.text = string.Format("{0:00}:{1:00}:{2:00}", hours, minuts, seconds);
 
-
-        // Anything above will start every second and repeat
-        StartCoroutine(Time());
-    }
-    
-    void AddTime(int countUp)
-    {
-        //if ()
-        {
-            
-        }
     }
 
 }
