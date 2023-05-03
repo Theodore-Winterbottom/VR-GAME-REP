@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyAi : MonoBehaviour
 {
 
     [Header("Objects attach to player")]
 
-    [SerializeField] public NavMeshAgent agent;
+    //[SerializeField] public NavMeshAgent agent;
 
     [SerializeField] private Transform player;
 
@@ -25,16 +26,19 @@ public class EnemyAi : MonoBehaviour
 
     [SerializeField] private float health;
 
-
     [SerializeField] private Rigidbody rb;
 
+    private bool lookAt;
+
     public float healthAmount = 100;
+
+    public List<Collider> colliders;
 
     //Point towards the instantiated Object will move
     Transform goal;
 
     //Reference to the NavMeshAgent
-    UnityEngine.AI.NavMeshAgent agent1;
+    public UnityEngine.AI.NavMeshAgent agent1;
 
     // Use this for initialization
     void Start()
@@ -45,8 +49,7 @@ public class EnemyAi : MonoBehaviour
         //Here you get a reference to the NavMeshAgent
         agent1 = GetComponent<UnityEngine.AI.NavMeshAgent>();
 
-        //You indicate to the agent to what position it has to move
-        agent1.destination = goal.position;
+
     }
 
     public void TakeDamage(float Damage)
@@ -60,12 +63,14 @@ public class EnemyAi : MonoBehaviour
         {
             TakeDamage(50);
         }
+        if (collision.gameObject.tag == "Fist")
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Update()
     {
-
-        agent1.destination = goal.position;
 
         if (healthAmount <= 0)
         {
@@ -74,12 +79,30 @@ public class EnemyAi : MonoBehaviour
 
         if (transform.position.y > .3f)
         {
-            agent.enabled = false;
+            lookAt = false;
+            agent1.enabled = false;
+            for (int i = 0; colliders.Count == i; i++)
+            {
+                colliders[i].enabled = false;
+            }
+
         }
         else
         {
-            agent.enabled = true;
+            agent1.enabled = true;
+            lookAt = true;
+            for (int i = 0; colliders.Count == i; i++)
+            {
+                colliders[i].enabled = true;
+            }
         }
+
+        if (lookAt)
+        {
+            agent1.destination = goal.position;
+            transform.LookAt(goal);
+        }
+
 
     }
 
@@ -93,8 +116,6 @@ public class EnemyAi : MonoBehaviour
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
         playerInRangeAttack = Physics.CheckSphere(transform.position, rangeAttack, whatIsPlayer);
 
-
-        
 
     }
 

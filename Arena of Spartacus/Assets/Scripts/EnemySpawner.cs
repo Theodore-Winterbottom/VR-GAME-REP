@@ -32,8 +32,8 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(interval);
         GameObject newEnemy = Instantiate(enemy, new Vector3(x, y, z), Quaternion.identity);
         StartCoroutine(spawnEnemy(interval, enemy));
-        enmeyAi.agent.Warp(transform.position);
-        enmeyAi.agent.enabled = true;
+        enmeyAi.agent1.Warp(transform.position);
+        enmeyAi.agent1.enabled = true;
         //enmeyAi.ChasePlayer();
         
     }

@@ -18,9 +18,6 @@ public class SwordCollison : MonoBehaviour
     void Update()
     {
 
-       if(gameObject.CompareTag("Enemy"))
-       {
-            Destroy(gameObject);
-       }
+       
     }
 }
