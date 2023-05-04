@@ -84,11 +84,11 @@ public class EnemyAi : MonoBehaviour
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
         playerInRangeAttack = Physics.CheckSphere(transform.position, rangeAttack, whatIsPlayer);
 
-
+        transform.LookAt(player);
         //chases player if it is in the dection field
         if (playerInSightRange && !playerInAttackRange)
         {
-            transform.LookAt(player);
+            
             ChasePlayer();
         }
 
