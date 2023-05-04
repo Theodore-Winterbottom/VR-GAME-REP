@@ -24,8 +24,6 @@ public class EnemyAi : MonoBehaviour
 
     [SerializeField] private float speed;
 
-    [SerializeField] private float health;
-
     [SerializeField] private Rigidbody rb;
 
     private bool lookAt;
@@ -61,7 +59,7 @@ public class EnemyAi : MonoBehaviour
     {
         if (collision.gameObject.tag == "Sword")
         {
-            TakeDamage(50);
+            TakeDamage(25);
         }
         if (collision.gameObject.tag == "Fist")
         {

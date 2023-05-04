@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 820748846931952402}
   m_Layer: 0
   m_Name: Brain (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.4
-  m_Speed: 2.23
+  m_Speed: 1.7
   m_Acceleration: 12
   avoidancePriority: 50
   m_AngularSpeed: 0
@@ -177,7 +177,6 @@ MonoBehaviour:
   playerInAttackRange: 1
   playerInRangeAttack: 1
   speed: 0.31
-  health: 100
   rb: {fileID: 1513842971178686937}
   healthAmount: 100
   colliders:
